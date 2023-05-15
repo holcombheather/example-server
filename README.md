@@ -1,44 +1,42 @@
-# package.json Notes
+# LAB - Class 01
 
-## For React Applications
+## Project: server-deployment-practice
 
-To deploy your application at GitHub pages, you'll need to add a home page property to your package.json which points to the deployed base URL of your GitHub Pages site.
+### Author: Heather Holcomb
 
-*NOTE: This will break deployments to other hosting services such as Netlify, Vercel, or AWS Amplify, so if you later wish to deploy there, remove this property completely.*
+### Problem Domain
 
-```json
-{
-  "homepage": "https://yourname.github.io/repository-name"
-}
-```
+This very basic express server is used as a base for CI/CD deployment exercises
 
-## Node / Express Applications
+### Links and Resources
 
-### For Tests
+- [GitHub Actions ci/cd](https://github.com/holcombheather/example-server/actions)
+- [back-end server url](https://exampler-server-prod.onrender.com/)
+- [repo](https://github.com/holcombheather/example-server)
 
-Your scripts section should have the following, so that you can easily run tests locally and in your CI.
+### Collaborators
 
-```json
-  "scripts": {
-    "start": "node index.js",
-    "lint": "eslint **/*.js",
-    "test": "jest --verbose --coverage",
-    "test-watch": "jest --watchAll --verbose --coverage",
-    "init:config": "sequelize init:config",
-    "db:create": "sequelize db:create"
-},
-```
+Used code from in-class demo from Ryan Gallaway (with permission).
 
-### For NPM Modules
+### Setup
 
-If you are creating a module to deploy at NPM, you'll want a "bin" section that identifies the name of the global command to run and your .js file that runs when called.
+#### `.env` requirements (where applicable)
 
-```json
-"bin": {
-    "fetch": "index.js"
-}
-```
+port variable exists within the env sample
 
-Additionally, that file should have as it's first line, so that it'll run without having to type "node filename.js" every time
 
-`#!/usr/bin/env node`
+#### How to initialize/run your application (where applicable)
+
+clone repo, `npm i`, then run `nodemon` in the terminal
+
+#### Routes
+
+- GET : `/success` - specific route to hit
+
+#### Tests
+
+To run tests, after running `npm i`, run the command `npm test`
+
+#### UML
+
+![UML image](./assets/uml.png)
