@@ -11,7 +11,8 @@ This very basic express server is used as a base for CI/CD deployment exercises
 ### Links and Resources
 
 - [GitHub Actions ci/cd](https://github.com/holcombheather/example-server/actions)
-- [back-end server url](https://exampler-server-prod.onrender.com/)
+- [back-end server prod url](https://exampler-server-prod.onrender.com)
+- [back-end server dev url](https://dev-1gtj.onrender.com)
 - [repo](https://github.com/holcombheather/example-server)
 
 ### Collaborators
